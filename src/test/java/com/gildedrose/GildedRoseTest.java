@@ -42,7 +42,7 @@ class GildedRoseTest {
     @Test
     void qualityCannotBeGreaterThanFifty() {
         Item[] items = new Item[]{
-                new Item("foo", DAYS, QUALITY*6)
+                new Item("foo", DAYS, QUALITY * 6)
         };
 
         buildHelperLists(items);
@@ -334,7 +334,7 @@ class GildedRoseTest {
                 assertTrue(it.quality >= QUALITY_MIN, "Quality Should be positive: " + it.toString());
                 //System.out.println(it.toString());
                 if (itemName != null && !itemName.equalsIgnoreCase(SULFURAS_ITEM)) {
-                    assertTrue(it.quality <= QUALITY_MAX, "Quality Max is "+QUALITY_MAX+": " + it.toString());
+                    assertTrue(it.quality <= QUALITY_MAX, "Quality Max is " + QUALITY_MAX + ": " + it.toString());
                 }
             }
         }
