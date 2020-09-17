@@ -9,16 +9,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GildedRoseTest {
 
-    ArrayList<Integer> itemQualities;
-    ArrayList<Integer> itemSellin;
-    final static int QUALITY_MIN = 0;
-    final static int QUALITY_MAX = 50;
-    final static int DAYS = 10;
-    final static int QUALITY = 10;
-    final static String SULFURAS_ITEM = "Sulfuras, Hand of Ragnaros";
-    final static String AGEDBRIE_ITEM = "Aged Brie";
-    final static String CONJURED_ITEM = "Conjured Mana Cake";
-    final static String BACKSTAGEPASS_ITEM = "Backstage passes to a TAFKAL80ETC concert";
+    private static ArrayList<Integer> itemQualities;
+    private static ArrayList<Integer> itemSellin;
+    private final static int QUALITY_MIN = 0;
+    private final static int QUALITY_MAX = 50;
+    private final static int DAYS = 10;
+    private final static int QUALITY = 10;
+    private final static String SULFURAS_ITEM = "Sulfuras, Hand of Ragnaros";
+    private final static String AGEDBRIE_ITEM = "Aged Brie";
+    private final static String CONJURED_ITEM = "Conjured Mana Cake";
+    private final static String BACKSTAGEPASS_ITEM = "Backstage passes to a TAFKAL80ETC concert";
 
     @BeforeEach
     void beforeEach() {
@@ -281,14 +281,14 @@ class GildedRoseTest {
 
     }
 
-    private void buildHelperLists(Item[] items) {
+    private static void buildHelperLists(Item[] items) {
         for (Item i : items) {
             itemQualities.add(i.quality);
             itemSellin.add(i.sellIn);
         }
     }
 
-    private void updateValidateQualityAndSellin(Item[] items, GildedRose app, int size) {
+    private static void updateValidateQualityAndSellin(Item[] items, GildedRose app, int size) {
         for (int x = 0; x < size; x++) {
             int sellin = 0;
             int quality = 0;
